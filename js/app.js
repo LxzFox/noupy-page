@@ -3,8 +3,12 @@ var check = document.querySelector(".check");
 // Cuando se carga la página, verifica si hay un valor en localStorage para el estado del checkbox
 window.addEventListener('load', function () {
     var isChecked = localStorage.getItem("checkbox_state");
-    if (isChecked === "true") {
-        check.checked = true;
+    if (isChecked === null) {
+        // Si no hay valor en localStorage, establece el checkbox como desmarcado (false)
+        check.checked = false;
+        localStorage.setItem("checkbox_state", false);
+    } else {
+        check.checked = isChecked === "true";
     }
 });
 
