@@ -1,0 +1,178 @@
+@font-face {
+  font-family: Starborn;
+  src: url('../fonts/Starborn.otf');
+}
+
+body {
+  margin: 5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background: #6fccc3;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav_items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  color: black;
+  font-family: Starborn;
+}
+
+.nav_icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2c8186;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-family: Starborn;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-image: url('../images/home-page-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: -1;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 23rem;
+}
+
+.round-button {
+  width: 30rem;
+  padding: 0.9rem;
+  margin: 0.2rem;
+  background-color: #2c8186;
+  color: black;
+  border: 0.2rem solid #6fccc3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-family: Starborn;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.round-button:hover {
+  background-color: #6fccc3;
+  border-color: #187174;
+  color: black;
+}
+
+.language-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 28rem; /* Ajusta este valor según sea necesario */
+}
+
+.en, .es {
+  color: black;
+  font-family: Starborn;
+  padding: 0 10px;
+}
+
+.flag-icon {
+  margin-right: 5px; /* Espaciado entre el icono de la bandera y el texto del idioma */
+}
+
+.check {
+  position: relative;
+  width: 50px;
+}
+
+.check:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #333;
+  border-radius: 25px;
+}
+
+.check:after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 25px;
+  transition: 0.25s;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+.check:checked:after {
+  left: 25px;
+  border: 2px solid #00a1ff;
+}
+
+.check:checked:before {
+  background: #333;
+}
+
