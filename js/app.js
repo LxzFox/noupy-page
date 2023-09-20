@@ -23,7 +23,7 @@ function idioma() {
     if (id == true) {
         location.href = "en/index.html";
     } else {
-        location.href = "/index.html";
+        location.href = "/noupy-page";
     }
 }
 
